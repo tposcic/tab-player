@@ -1,9 +1,9 @@
 {
-  "name": "CHANGE THIS : Extension boilerplate",
-  "version": "0.0.1",
+  "name": "Google Chrome Tab Player",
+  "version": "0.0.2",
   "manifest_version": 2,
-  "description": "This extension was created with the awesome extensionizr.com",
-  "homepage_url": "http://extensionizr.com",
+  "description": "Google Chrome extension that uses Youtube tabs as a playlist and plays them in order",
+  "homepage_url": "http://www.google.com",
   "icons": {
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
@@ -22,6 +22,21 @@
     "notifications",
     "tabs"
   ],
+  "permissions": [
+    "activeTab",
+    "<all_urls>",
+    "contextMenus",
+    "tabs"
+  ],
+  "content_scripts": [
+    {
+        "matches": ["*://www.youtube.com/*"],
+        "js": ["js/jquery/jquery.min.js", "src/bg/isolated.js", "src/bg/injected.js"]
+    }
+    ],
+    "web_accessible_resources": [
+        "src/bg/injected.js"
+    ],
   "omnibox": {
     "keyword": "extensionizr"
   }

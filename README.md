@@ -3,9 +3,9 @@ Google Chrome extension that uses Youtube tabs as a playlist and plays them in o
 
 # USES
 
+# [Angular 1.0.6](https://angularjs.org/)
+# [Jquery 2.0.0](https://jquery.com/)
 # [Fancy Settings 1.2](https://github.com/frankkohlhepp/fancy-settings)
-# [Angular 1.0.6]
-# [Jquery 2.0.0]
 
 # How to install
 Open up GOOGLE CHROME and copy in this address: chrome://extensions/

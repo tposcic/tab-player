@@ -20,13 +20,10 @@
   "permissions": [
     "contentSettings",
     "notifications",
-    "tabs"
-  ],
-  "permissions": [
+    "tabs",
     "activeTab",
     "<all_urls>",
-    "contextMenus",
-    "tabs"
+    "contextMenus"
   ],
   "content_scripts": [
     {

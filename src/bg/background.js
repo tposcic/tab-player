@@ -4,6 +4,22 @@ var settings = new Store("settings", {
     "sample_setting": "test"
 });
 
+
+function send() {
+    chrome.tabs.getSelected(null, function(tab) {
+        var client = new XMLHttpRequest();
+        client.onreadystatechange = function() {
+            if(this.readyState == 4) {
+                alert(this.status);
+            }
+        }
+        client.open("POST", "http://myurl");
+        client.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");
+        var url = tab.url;
+        client.send(url);
+    });
+}
+
 chrome.tabs.onZoomChange.addListener(function(){
   alert('the zoom has been changed it seems');
 });

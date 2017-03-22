@@ -28,7 +28,8 @@
   "content_scripts": [
     {
         "matches": ["*://www.youtube.com/*"],
-        "js": ["js/jquery/jquery.min.js", "src/bg/tabplayer.js"]
+        "js": ["js/jquery/jquery.min.js", "src/bg/tabplayer.js"],
+        "run_at": "document_end"
     }
     ],
     "web_accessible_resources": [

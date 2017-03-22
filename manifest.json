@@ -14,7 +14,7 @@
     "scripts": [
       "src/bg/background.js"
     ],
-    "persistent": true
+    "persistent": false
   },
   "options_page": "src/options_custom/index.html",
   "permissions": [
@@ -25,6 +25,15 @@
     "<all_urls>",
     "contextMenus"
   ],
+  "content_scripts": [
+    {
+        "matches": ["*://www.youtube.com/*"],
+        "js": ["js/jquery/jquery.min.js", "src/bg/tabplayer.js"]
+    }
+    ],
+    "web_accessible_resources": [
+        "src/bg/tabplayer.js"
+    ],
   "omnibox": {
     "keyword": "extensionizr"
   }

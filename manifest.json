@@ -23,6 +23,15 @@
     "activeTab",
     "contextMenus"
   ],
+  "content_scripts": [
+  {
+      "matches": ["*://www.youtube.com/*"],
+      "js": ["src/bg/injected.js"]
+  }
+  ],
+  "web_accessible_resources": [
+      "src/bg/injected.js"
+  ],
   "omnibox": {
     "keyword": "extensionizr"
   }

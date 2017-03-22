@@ -14,7 +14,7 @@
     "scripts": [
       "src/bg/background.js"
     ],
-    "persistent": false
+    "persistent": true
   },
   "options_page": "src/options_custom/index.html",
   "permissions": [

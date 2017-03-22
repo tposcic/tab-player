@@ -11,30 +11,18 @@
   },
   "default_locale": "en",
   "background": {
-    "scripts": [
-      "src/bg/background.js"
-    ],
-    "persistent": true
+    "scripts": [ "src/bg/background.js" ],
+    "persistent": false
   },
   "options_page": "src/options_custom/index.html",
   "permissions": [
+    "*://www.youtube.com/*",
     "contentSettings",
     "notifications",
     "tabs",
     "activeTab",
-    "<all_urls>",
     "contextMenus"
   ],
-  "content_scripts": [
-    {
-        "matches": ["*://www.youtube.com/*"],
-        "js": ["js/jquery/jquery.min.js", "src/bg/tabplayer.js"],
-        "run_at": "document_end"
-    }
-    ],
-    "web_accessible_resources": [
-        "src/bg/tabplayer.js"
-    ],
   "omnibox": {
     "keyword": "extensionizr"
   }
